@@ -3,8 +3,52 @@ const express = require('express');
 const app = express()
 const port = process.env.PORT;
 
+const welcome_page = 
+`
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <style>
+        /* Center everything on the screen */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+            background-color: #f4f4f9;
+        }
+
+        /* Style the welcome text box */
+        .welcome-box {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            background-color: white;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HTML Layout -->
+    <div class="welcome-box">
+        <h1>Welcome!</h1>
+    </div>
+
+</body>
+</html>
+`
+
 app.get('/', (req, res) => {
-  res.send('Hello, how are you')
+  res.send(welcome_page)
 })
 
 app.get('/about', (req, res) => {
