@@ -34,6 +34,8 @@ const welcome_page =
         border-radius:20px;
         text-align:center;
         box-shadow:0 12px 30px rgba(0,0,0,0.15);
+        margin: 10px;
+        box-sizing: border-box;
     }
 
     h1{
