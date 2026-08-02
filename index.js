@@ -6,42 +6,72 @@ const port = process.env.PORT;
 const welcome_page = 
 `
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Welcome</title>
-    <style>
-        /* Center everything on the screen */
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: sans-serif;
-            background-color: #f4f4f9;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome</title>
 
-        /* Style the welcome text box */
-        .welcome-box {
-            text-align: center;
-            padding: 20px;
-            border: 2px solid #333;
-            border-radius: 8px;
-            background-color: white;
-        }
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, Helvetica, sans-serif;
+    }
 
-        h1 {
-            color: #2c3e50;
-            margin: 0;
-        }
-    </style>
+    body{
+        height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background:linear-gradient(135deg,#d8f3dc,#95d5b2);
+    }
+
+    .card{
+        background:white;
+        padding:50px 70px;
+        border-radius:20px;
+        text-align:center;
+        box-shadow:0 12px 30px rgba(0,0,0,0.15);
+    }
+
+    h1{
+        color:#1b4332;
+        font-size:48px;
+        margin-bottom:10px;
+    }
+
+    p{
+        color:#52796f;
+        font-size:18px;
+    }
+
+    button{
+        margin-top:25px;
+        padding:12px 28px;
+        border:none;
+        border-radius:10px;
+        background:#2d6a4f;
+        color:white;
+        font-size:16px;
+        cursor:pointer;
+        transition:0.3s;
+    }
+
+    button:hover{
+        background:#1b4332;
+        transform:translateY(-2px);
+    }
+</style>
 </head>
 <body>
 
-    <!-- HTML Layout -->
-    <div class="welcome-box">
-        <h1>Welcome!</h1>
-    </div>
+<div class="card">
+    <h1>🌿 Welcome</h1>
+    <p>Glad you're here. Have a wonderful day!</p>
+    <button>Get Started</button>
+</div>
 
 </body>
 </html>
